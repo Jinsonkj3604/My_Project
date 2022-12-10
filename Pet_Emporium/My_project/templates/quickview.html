@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <title>shopnow</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="//fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../static/admin/css/style-starter.css">
+  
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        {% for w in w %}
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img src="../static/pics/{{w.image}}" alt="">
+                     </a>
+                    
+                  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% for r in r %}
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img src="../static/pics/{{r.image}}" alt="">
+                     </a>
+                    
+                  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% for x in x %}
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img src="../static/pics/{{x.image}}" alt="">
+                     </a>
+                    
+                  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% for y in y %}
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img src="../static/pics/{{y.image}}" alt="">
+                     </a>
+                    
+                  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% for n in n %}
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img src="../static/pics/{{n.image}}" alt="">
+                     </a>
+                    
+                  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>

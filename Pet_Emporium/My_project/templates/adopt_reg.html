@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<body style="background-image:url(../static/background/ara4.jpg);background-repeat: no-repeat;background-size: cover;">
+<div class="row">
+  <div class="col-md-12">
+	  {% with messages = get_flashed_messages(with_categories=true) %}
+		  {% if messages %}
+			{% for category, message in messages %}
+			  <div class="alert alert-{{ category }}">
+				{{ message }}
+			  </div>
+			{% endfor %}
+		  {% endif %}
+	  {% endwith %}
+  </div>
+</div>
+  <div class="container" style="padding-left:300px;
+		  padding-right:300px;">
+			  <div class="card" style="background-color: transparent !important;">
+				  <div class="card-header">
+					  <h4>AdoptCenter Registration</h4>
+				  </div>
+				  <div class="card-body">
+					  <form action="/adopt_reg"  method="POST" class="login-form" enctype="multipart/form-data">
+
+					  {{form.hidden_tag()}}
+
+							  <div class="form-group">
+								  {{ form.name.label }}
+									  {% if form.name.errors %}
+										  {{ form.name(class="form-control form-control-lg is-invalid") }}
+										  <div class="invalid-feedback">
+											  {% for error in form.name.errors %}
+												  <span>{{ error }}</span>
+											  {% endfor %}
+										  </div>
+									  {% else %}
+										  {{ form.name(class="form-control") }}
+									  {% endif %}
+							  </div>
+
+							  <div class="form-group">
+								  {{ form.usname.label}}
+									  {% if form.usname.errors %}
+										  {{ form.usname(class="form-control form-control-lg is-invalid") }}
+										  <div class="invalid-feedback">
+											  {% for error in form.usname.errors %}
+												  <span>{{ error }}</span>
+											  {% endfor %}
+										  </div>
+									  {% else %}
+										  {{ form.usname(class="form-control") }}
+									  {% endif %}
+							  </div>
+
+							  <div class="form-group">
+								  {{ form.email.label}}
+									  {% if form.email.errors %}
+										  {{ form.email(class="form-control form-control-lg is-invalid") }}
+										  <div class="invalid-feedback">
+											  {% for error in form.email.errors %}
+												  <span>{{ error }}</span>
+											  {% endfor %}
+										  </div>
+									  {% else %}
+										  {{ form.email(class="form-control") }}
+									  {% endif %}
+							  </div>
+
+
+							  <div class="form-group">
+								  {{ form.exp.label}}
+									  {% if form.exp.errors %}
+										  {{ form.exp(class="form-control form-control-lg is-invalid") }}
+										  <div class="invalid-feedback">
+											  {% for error in form.exp.errors %}
+												  <span>{{ error }}</span>
+											  {% endfor %}
+										  </div>
+										  {% else %}
+										  {{ form.exp(class="form-control") }}
+								  {% endif %}
+							  </div>
+
+							  <div class="form-group">
+									  {{ form.loc.label }}
+										  {% if form.loc.errors %}
+											  {{ form.loc(class="form-control form-control-lg is-invalid") }}
+											  <div class="invalid-feedback">
+												  {% for error in form.loc.errors %}
+													  <span>{{ error }}</span>
+												  {% endfor %}
+											  </div>
+										  {% else %}
+												  {{ form.loc(class="form-control") }}
+									  {% endif %}
+							  </div>
+
+							  <div class="form-group">
+									  {{ form.password.label }}
+										  {% if form.password.errors %}
+											  {{ form.password(class="form-control form-control-lg is-invalid") }}
+											  <div class="invalid-feedback">
+												  {% for error in form.password.errors %}
+													  <span>{{ error }}</span>
+												  {% endfor %}
+											  </div>
+										  {% else %}
+											  {{ form.password(class="form-control") }}
+										  {% endif %}
+							  </div>
+
+							  <div class="form-group">
+								  {{ form.image.label }}
+									  {{ form.image(class="form-control-file") }}
+										  {% if form.image.errors %}
+											  {% for error in form.image.errors %}
+												  <span class="text-danger">{{ error }}</span></br>
+											  {% endfor %}
+										  {% endif %}
+								  </div>
+							  <div class="form-group">
+							  {{ form.submit(class="btn btn-outline-info") }}
+							  </div>
+							  <div class="form-group">
+								  <small>Return Home &nbsp</small><a href="/">Click Here!</a> &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp
+								  <small> If already register Login </small><a href="/adopt_login">Login !</a>
+							  </div>
+					  </form>
+				  </div>
+			  </div>
+		  </div>
+</body>
+
+						  

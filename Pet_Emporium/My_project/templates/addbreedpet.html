@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<body style="background-image:url(../static/background/ara4.jpg);background-repeat: no-repeat;background-size: cover;">
+<div class="row">
+  <div class="col-md-12">
+	  {% with messages = get_flashed_messages(with_categories=true) %}
+		  {% if messages %}
+			{% for category, message in messages %}
+			  <div class="alert alert-{{ category }}">
+				{{ message }}
+			  </div>
+			{% endfor %}
+		  {% endif %}
+	  {% endwith %}
+  </div>
+</div>
+  <div class="container" style="padding-left:300px;
+		  padding-right:300px;">
+			  <div class="card" style="background-color: transparent !important;">
+				  <div class="card-header">
+					  <h4>Add Breed Pet</h4>
+				  </div>
+				  <div class="card-body">
+					  <form action="/addbreedpet"  method="POST" class="login-form" enctype="multipart/form-data">
+
+					  {{form.hidden_tag()}}
+
+							  <div class="form-group">
+								  {{ form.a_family.label }}
+									  {% if form.a_family.errors %}
+										  {{ form.a_family(class="form-control form-control-lg is-invalid") }}
+										  <div class="invalid-feedback">
+											  {% for error in form.a_family.errors %}
+												  <span>{{ error }}</span>
+											  {% endfor %}
+										  </div>
+									  {% else %}
+										  {{ form.a_family(class="form-control") }}
+									  {% endif %}
+							  </div>
+
+							  <div class="form-group">
+								  {{ form.a_category.label}}
+									  {% if form.a_category.errors %}
+										  {{ form.a_category(class="form-control form-control-lg is-invalid") }}
+										  <div class="invalid-feedback">
+											  {% for error in form.a_category.errors %}
+												  <span>{{ error }}</span>
+											  {% endfor %}
+										  </div>
+									  {% else %}
+										  {{ form.a_category(class="form-control") }}
+									  {% endif %}
+							  </div>
+
+							  <div class="form-group">
+								  {{ form.a_price.label}}
+									  {% if form.a_price.errors %}
+										  {{ form.a_price(class="form-control form-control-lg is-invalid") }}
+										  <div class="invalid-feedback">
+											  {% for error in form.a_price.errors %}
+												  <span>{{ error }}</span>
+											  {% endfor %}
+										  </div>
+									  {% else %}
+										  {{ form.a_price(class="form-control") }}
+									  {% endif %}
+							  </div>
+
+
+							  <div class="form-group">
+								  {{ form.a_location.label}}
+									  {% if form.a_location.errors %}
+										  {{ form.a_location(class="form-control form-control-lg is-invalid") }}
+										  <div class="invalid-feedback">
+											  {% for error in form.a_location.errors %}
+												  <span>{{ error }}</span>
+											  {% endfor %}
+										  </div>
+										  {% else %}
+										  {{ form.a_location(class="form-control") }}
+								  {% endif %}
+							  </div>
+
+							  <div class="form-group">
+									  {{ form.a_contact.label }}
+										  {% if form.a_contact.errors %}
+											  {{ form.a_contact(class="form-control form-control-lg is-invalid") }}
+											  <div class="invalid-feedback">
+												  {% for error in form.a_contact.errors %}
+													  <span>{{ error }}</span>
+												  {% endfor %}
+											  </div>
+										  {% else %}
+												  {{ form.a_contact(class="form-control") }}
+									  {% endif %}
+							  </div>
+
+							  
+
+							  <div class="form-group">
+								  {{ form.image.label }}
+									  {{ form.image(class="form-control-file") }}
+										  {% if form.image.errors %}
+											  {% for error in form.image.errors %}
+												  <span class="text-danger">{{ error }}</span></br>
+											  {% endfor %}
+										  {% endif %}
+								  </div>
+							  <div class="form-group">
+							  {{ form.submit(class="btn btn-outline-info") }}
+							  </div>
+							  
+					  </form>
+				  </div>
+			  </div>
+		  </div>
+</body>
+
+						  

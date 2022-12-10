@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <h1>choose your option</h1>
+  
+    <div class="row">
+      <div class="column1">
+        <img class="pic1" src="../static/images/adult_horse.jpg" width="300" height="200">
+        <a href="/adulthorse">
+        <h2>Horses</h2></div>
+        </a>
+      <div>
+        <img class="pic2" src="../static/images/baby_horse.jpg" width="300" height="200">
+        <a href="/babyhorse">
+       <h2>Baby Horses</h2>
+       </a> 
+     </div>
+    
+    </div>
+  </div>
+</body>
+
+<style>
+  .column1 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  } 
+ .pic1{
+   width: 300;
+   height: 200;
+ }
+ .pic2{
+   width: 300;
+   height: 200;
+ }
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+</html>
+  

@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>       
+      </head>
+    <body class="bgimg">
+        <body class="blur">
+           <form action="/action_page.php">
+            <div class="container bg-overlay">
+               <div class="jumbotron">
+                   <h3 style="text-align: center;"><b>CATEGORIES</b></h3>
+                   <div class="topnav">
+                   <h4><a class="active" href="/adminindex">Home</a></h4>
+                    <h4><a href="/add_pet">Addpets</a></h4>
+                </div>
+               </div>
+               <div class="row">
+                   <div class="col-lg-3">
+                       <a href="/dog">
+                       <img class="img-circle" src="../static/images/dogan.jpg" alt="dogs" width="300" height="200">
+                       <h4 style="text-align: center;"><b>Dogs</b></h4>
+                       </a>
+                   </div>
+                   <div class="col-lg-3">
+                       <a href="/cat">
+                       <img class="img-circle" src="../static/images/catan.jpg" alt="cats" width="300" height="200">
+                       <h4 style="text-align: center;"><b>Cats</b></h4>
+                       </a>
+                   </div>
+                   <div class="col-lg-3">
+                       <a href="/birds">
+                       <img class="img-circle" src="../static/images/birdan.jpg" alt="birds" width="300" height="200">
+                       <h4 style="text-align: center;"><b>Birds</b></h4>
+                       </a>
+                   </div>
+                   <div class="col-lg-3">
+                       <a href="/exortic">
+                       <img class="img-circle" src="../static/images/exortican.jpg" alt="exortics" width="300" height="200">
+                       <h4 style="text-align: center;"><b>Exortics</b></h4>
+                       </a>
+                   </div>
+                   <div class="col-lg-3">
+                       <a href="/fishes">
+                       <img class="img-circle" src="../static/images/fishesan.jpg" alt="fishes" width="300" height="200">
+                       <h4 style="text-align: center;"><b>Fishes</b></h4>
+                       </a>
+                   </div>
+                   <div class="col-lg-3">
+                       <a href="/horses">
+                       <img class="img-circle" src="../static/images/horsean.jpg" alt="horses" width="300" height="200">
+                       <h4 style="text-align: center;"><b>Horses</b></h4>
+                       </a>
+                   </div>
+                   <div class="col-lg-3">
+                       <a href="/livestock">
+                       <img class="img-circle" src="../static/images/livestockan.jpg" alt="livestocks" width="300" height="200">
+                       <h4 style="text-align: center;"><b>Livestocks</b></h4>
+                       </a>
+                   </div>
+                   <div class="col-lg-3">
+                       <a href="/reptiles">
+                       <img class="img-circle" src="../static/images/reptilesan.jpg" alt="reptiles" width="300" height="200">
+                       <h4 style="text-align: center;"><b>Reptiles</b></h4>
+                       </a>
+                   </div>
+               </div>
+           </div>
+         </form>
+        </body>
+    </body>
+</html>
+
+
+<style>
+
+    .bg-overlay {
+        background:linear-gradient(rgba(226, 210, 210, 0.7), rgba(209, 185, 185, 0.7)) url("../static/images/b2.jpg");
+        background-repeat: no-repeat;
+        background-size:100%;
+        background-position: center center;
+        height: 700px;
+        padding-top: 50px;
+    }
+    .bgimg {
+  background-image: url(../static/images/b2.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.blur {
+  background: rgba(245, 241, 241, 0.767); 
+  backdrop-filter: blur(20px); 
+  height: 30vh;   
+}   
+</style>

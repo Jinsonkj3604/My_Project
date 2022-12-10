@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>shopnow</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="//fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../static/admin/css/style-starter.css">
+  
+</head>
+<body>
+
+<div class="container">
+    <h3 class="h3">BreedClinics</h3>
+    <div class="row">
+        {% for f in f %}
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img src="../static/pics/{{f.image}}" alt="">
+                     </a>
+                     <h4>{{f.name}}</h4>
+                     <h4>{{f.location}}</h4>
+                     <h4>{{f.uname}}</h4>
+                     <h4>{{f.email}}</h4>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <a class="add-to-cart" href="">Add to cart</a>
+                </div>
+                <div class="product-content">
+                  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
